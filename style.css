@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+
+body
+{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+}
+
+.phone_body
+{
+    position: relative;
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.1s;
+}
+
+.main_circle
+{
+    width: 60rem;
+    height: 60rem;
+    border-radius: 100%;
+    background: linear-gradient(40deg, #ff0080, #ff8C00 70%);
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+.phone
+{
+    width: 18rem;
+    height: 38rem;
+    position: relative;
+    z-index: 2;
+    background-color: inherit;
+    box-shadow: 0 4px 35px rgba(0, 0, 0, 0.3);
+    border-radius: 40px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.menu
+{
+    opacity: 0.4;
+    padding: 0.8rem 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time
+{
+    font-size: 14px;
+}
+
+.icon
+{
+    display: flex;
+}
+
+.camera
+{
+    position: absolute;
+    top: 10px;
+    right: 136px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    background: linear-gradient(40deg, #125, #152);
+}
+
+.material-icons
+{
+    position: absolute;
+    top: 12px;
+    font-size: 16px;
+    left: 80px;
+}
+
+.fa-wifi
+{
+    position: absolute;
+    top :14px;
+    font-size: 12px;
+    right: 64px;
+}
+
+.fa-battery-three-quarters
+{
+    width: .85rem;
+    height: 0.45rem;
+    position: absolute;
+    top: 12px;
+    right: 25px;
+}
+
+.fa-signal
+{
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 15px;
+    right: 60px;
+    font-size: 11px;
+}
+
+.content
+{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    width: 70%;
+    transform: translateY(5%);
+}
+
+.circle
+{
+    position: relative;
+    border-radius: 100%;
+    width: 8rem;
+    height: 8rem;
+    background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+    margin: auto;
+}
+
+.cut_circle
+{
+    position: absolute;
+    border-radius: 100%;
+    right: 0;
+    width: 6rem;
+    height: 6rem;
+    background: #fff;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+p{
+    font-size: 90%;
+}
+
+.heading
+{
+    font-size: 140%;
+    font-weight: bolder;
+    margin: 3rem 0 .2rem 0;
+}
+
+lable, .toggle
+{
+    height: 2.8rem;
+    border-radius: 100px;
+}
+
+label
+{
+    width: 100%;
+    background-color: rgba(63, 53, 53, 0.1);
+    border-radius: 100px;
+    position: relative;
+    margin: 1.8rem 0 4rem 0;
+    cursor: pointer;
+}
+
+.toggle
+{
+    position: absolute;
+    width: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 15px rgba(41, 3, 3, 0.15);
+    transition: transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.names
+{
+    font-size: 90%;
+    font-weight: bolder;
+    width: 65%;
+    margin-left: 17.5%;
+    margin-top: .5%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.dark
+{
+    opacity: .5;
+}
+
+.mark
+{
+    border-radius: 100px;
+    background-color: #000;
+}
+
+.mark
+{
+    width: 7%;
+    margin: auto;
+    position: relative;
+    height: .25rem;
+}
+
+.mark::before
+{
+    content: '';
+    position: absolute;
+    width: .25rem;
+    height: 100%;
+    left: -70%;
+    opacity: .15;
+    background-color: inherit;
+}
+
+.mark::after
+{
+    content: '';
+    position: absolute;
+    width: .25rem;
+    height: 100%;
+    right: -70%;
+    opacity: .15;
+    background-color: inherit;
+}
+
+.skip
+{
+    padding: 1.5rem 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skip p
+{
+    opacity: .55;
+    font-size: 90%;
+    cursor: pointer;
+}
+
+.skip p:hover
+{
+    text-decoration: underline;
+}
+
+.arrow_forward
+{
+    width: 20px;
+    height: 5px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 24px;
+}
+
+.fab
+{
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: transform .5s cubic-bezier(0.19,1,0.22,1);
+}
+
+.fab:hover
+{
+    transform: scale(1.2);
+}
+
+.swipe
+{
+    width: 40%;
+    height: 0.25rem;
+    background-color: #000;
+    opacity: 0.15;
+    border-radius: 10px;
+    margin: 0.5rem auto;
+}
+
+[type="checkbox"]:checked + .app .cut_circle 
+{
+    transform: scale(1);
+    background: #26242E;
+}
+
+[type="checkbox"]:checked + .app .circle
+{
+    background: linear-gradient(40deg, #8983F7, #a3dafb 70%);
+}
+
+[type="checkbox"]:checked + .app .main_circle
+{
+    background: linear-gradient(40deg, #8983F7, #a3dafb 70%);
+}
+
+[type="checkbox"]:checked + .app .fab
+{
+    background-color: #34323d;
+}
+
+[type="checkbox"]:checked + .app .mark
+{
+    background-color: #fff;
+}
+
+[type="checkbox"]:checked + .app .network
+{
+    border-color: transparent; 
+}
+
+[type="checkbox"]:checked + .app .swipe
+{
+    background-color: #34323d;
+    opacity: 1;
+}
+
+[type="checkbox"]
+{
+    display: none;
+}
+
+[type="checkbox"]:checked + .app .toggle
+{
+    transform: translateX(100%);
+    background-color: #34323d;
+}
+
+[type="checkbox"]:checked + .app .dark
+{
+    opacity: 1;
+}
+
+[type="checkbox"]:checked + .app .light
+{
+    opacity: .5;
+}
+
+[type="checkbox"]:checked + .app .phone_body
+{
+    background-color: #26242E;
+    color: #fff;
+}
